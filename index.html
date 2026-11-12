@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ziwanger Launcher — скачать</title>
+<meta name="description" content="Ziwanger Launcher: лаунчер Minecraft со сборками, модами с Modrinth, музыкой и пиксельным дизайном.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23808080' d='M16 2l13 7-13 7L3 9z'/%3E%3Cpath fill='%23585858' d='M3 9l13 7v14L3 23z'/%3E%3Cpath fill='%233a3a3a' d='M29 9v14l-13 7V16z'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f1efe9; --panel:#ffffff; --text:#1d1d1f; --muted:#5d5d63; --line:#b9b6ac;
+  --green:#3c8527; --green-hi:#6fbf4a; --green-lo:#1d4a10; --btn:#d6d6d6;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#17171a; --panel:#242427; --text:#f2f2f2; --muted:#a8a8b0; --line:#3d3d42; --btn:#6b6b6b; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.6 Consolas,"Courier New",ui-monospace,monospace;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:32px 32px;background-position:-1px -1px}
+body::before{content:"";position:fixed;inset:0;background:var(--bg);opacity:.9;z-index:-1}
+.wrap{max-width:860px;margin:0 auto;padding:24px 18px 60px}
+nav{display:flex;align-items:center;gap:12px;padding:10px 0}
+nav b{font-size:18px}
+nav a{margin-left:auto;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--text)}
+.card{background:var(--panel);border:2px solid;border-color:#fff3 #0006 #0006 #fff3;outline:2px solid #000;margin:22px 0;padding:22px}
+.hero{text-align:center;padding:36px 20px}
+.hero svg{width:96px;height:96px;image-rendering:pixelated}
+h1{font-size:clamp(28px,6vw,44px);margin:12px 0 6px}
+h2{margin:0 0 12px;font-size:22px}
+p{margin:8px 0}
+.muted{color:var(--muted)}
+.btn{display:inline-block;padding:13px 26px;margin:6px;color:#fff;text-decoration:none;font-weight:bold;
+  background:var(--btn);border:2px solid;border-color:#c8c8c8 #333 #333 #c8c8c8;outline:2px solid #000}
+.btn:hover{background:#7c82b8;color:#ffffa0}
+.btn.main{background:var(--green);font-size:19px;padding:16px 34px;border-color:var(--green-hi) var(--green-lo) var(--green-lo) var(--green-hi)}
+.btn.main:hover{background:#4aa332;color:#ffffa0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.grid div{padding:14px;border:2px solid var(--line)}
+.grid b{display:block;margin-bottom:4px}
+ol{padding-left:22px} li{margin:6px 0}
+code{background:#0002;padding:1px 6px}
+details{border:2px solid var(--line);padding:10px 14px;margin:8px 0}
+summary{cursor:pointer;font-weight:bold}
+footer{text-align:center;color:var(--muted);font-size:14px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <b>Ziwanger Launcher</b>
+    <a id="src" href="#">GitHub</a>
+  </nav>
+
+  <section class="card hero">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="#808080" d="M16 2l13 7-13 7L3 9z"/>
+      <path fill="#585858" d="M3 9l13 7v14L3 23z"/>
+      <path fill="#3a3a3a" d="M29 9v14l-13 7V16z"/>
+    </svg>
+    <h1>Ziwanger Launcher</h1>
+    <p class="muted">Лаунчер Minecraft Java: сборки, моды с Modrinth, музыка и пиксельный дизайн.</p>
+    <p>
+      <a id="dl" class="btn main" href="#">Скачать для Windows</a><br>
+      <a id="rel" class="btn" href="#">Все версии</a>
+    </p>
+    <p class="muted" id="ver">Windows 10/11 · бесплатно</p>
+  </section>
+
+  <section class="card">
+    <h2>Возможности</h2>
+    <div class="grid">
+      <div><b>Сборки</b>Отдельная папка, версия и память для каждой сборки, импорт .mrpack.</div>
+      <div><b>Моды</b>Поиск и установка модов с Modrinth прямо из лаунчера, зависимости ставятся сами.</div>
+      <div><b>Готовые сборки</b>Наборы для слабых, средних и мощных ПК на Fabric.</div>
+      <div><b>Аккаунты</b>Офлайн, Microsoft и Ely.by.</div>
+      <div><b>Копии миров</b>Автокопии перед запуском и восстановление в один клик.</div>
+      <div><b>Дизайн и музыка</b>Темы, анимированные фоны, встроенный плеер с вашей папкой музыки.</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Установка</h2>
+    <ol>
+      <li>Установите Java 21 с <a href="https://adoptium.net" style="color:inherit">adoptium.net</a> (для версий до 1.20.4 хватит Java 17).</li>
+      <li>Скачайте установщик кнопкой выше и запустите его.</li>
+      <li>Если Windows покажет предупреждение SmartScreen, нажмите «Подробнее» → «Выполнить в любом случае».</li>
+      <li>Откройте лаунчер, создайте сборку или выберите готовую и нажмите «Играть».</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Вопросы</h2>
+    <details><summary>Почему Windows или антивирус ругается?</summary>
+      <p class="muted">Установщик не подписан платным сертификатом, поэтому Windows считает издателя неизвестным. Исходный код открыт, его можно проверить в репозитории.</p></details>
+    <details><summary>Нужна ли лицензия Minecraft?</summary>
+      <p class="muted">Для игры на лицензионных серверах нужен аккаунт Microsoft с купленной игрой. Офлайн-режим подходит для одиночной игры и серверов без проверки.</p></details>
+    <details><summary>Где хранятся мои данные?</summary>
+      <p class="muted">Всё лежит локально, в папке <code>.quiet_launcher</code> в вашем профиле пользователя. Лаунчер ничего не отправляет на сторонние серверы, кроме запросов к Mojang, Modrinth и Ely.by.</p></details>
+    <details><summary>Это официальный продукт Mojang?</summary>
+      <p class="muted">Нет. Это неофициальный лаунчер, он не связан с Mojang и Microsoft.</p></details>
+  </section>
+
+  <footer>Ziwanger Launcher · неофициальный проект, не связан с Mojang Studios и Microsoft</footer>
+</div>
+
+<script>
+  // ВПИШИТЕ СВОИ ДАННЫЕ:
+  const USER = "ВАШ_НИК_НА_GITHUB";
+  const REPO = "ziwanger-launcher";
+  const FILE = "ZiwangerLauncher-Setup.exe";
+
+  const base = `https://github.com/${USER}/${REPO}`;
+  document.getElementById("dl").href  = `${base}/releases/latest/download/${FILE}`;
+  document.getElementById("rel").href = `${base}/releases`;
+  document.getElementById("src").href = base;
+
+  // Показываем номер последней версии (если не получится, останется текст по умолчанию)
+  fetch(`https://api.github.com/repos/${USER}/${REPO}/releases/latest`)
+    .then(r => r.ok ? r.json() : null)
+    .then(d => { if (d && d.tag_name) document.getElementById("ver").textContent = `Версия ${d.tag_name} · Windows 10/11 · бесплатно`; })
+    .catch(() => {});
+</script>
+</body>
+</html>
